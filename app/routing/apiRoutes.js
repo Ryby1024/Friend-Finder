@@ -12,7 +12,7 @@ module.exports = function (app) {
 
         let bestMatch;
         let arrayCheck = 0;
-        let = friendDifference = 100;
+        let friendDifference = 100;
         let user = req.body;
 
 

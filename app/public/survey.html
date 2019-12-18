@@ -215,8 +215,8 @@
                     if ($(this).val() === "") isValid = false;
                 });
                 $(".chosen-select").each(function () {
-                    if ($(this).val() < 1 || $(this).val() > 5) isValid = false;
-                    alert("Please fill out the whole survey!")
+                    if ($(this).val() === "") isValid = false;
+                    
                 });
                 return isValid;
             }
