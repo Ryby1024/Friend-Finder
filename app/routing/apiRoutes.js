@@ -1,4 +1,4 @@
-const friends = require("../data/friends.js");
+const friends = require("../data/friends");
 
 module.exports = function (app) {
 
@@ -33,10 +33,12 @@ module.exports = function (app) {
                 friendDifference = totalDifference;
             }
             arrayCheck++;
+            
         };
 
-        if (friends.length = arrayCheck) {
+        if (friends.length === arrayCheck) {
             friends.push(user);
+            console.log(user);
             console.log("Friend added");
             res.json(bestMatch);
         }

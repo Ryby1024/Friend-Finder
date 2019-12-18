@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 
@@ -27,9 +28,9 @@
         <hr>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 1</b></h3>
-                <h4></h4>
+                <h4>Your idea of a great night is at home in comfortable clothes.</h4>
                 <select id="q1" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -42,9 +43,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 2</b></h3>
-                <h4></h4>
+                <h4>You prefer seeing mountains rather than beaches.</h4>
                 <select id="q2" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -57,9 +58,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 3</b></h3>
-                <h4></h4>
+                <h4>You would rather wake up early rather than sleep all day.</h4>
                 <select id="q3" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -72,9 +73,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 4</b></h3>
-                <h4></h4>
+                <h4>You enjoy playing video games.</h4>
                 <select id="q4" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -87,9 +88,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 5</b></h3>
-                <h4></h4>
+                <h4>You can sit and watch football all weekend.</h4>
                 <select id="q5" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -102,9 +103,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 6</b></h3>
-                <h4></h4>
+                <h4>You rather be cold than hot.</h4>
                 <select id="q6" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -117,9 +118,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 7</b></h3>
-                <h4></h4>
+                <h4>You prefer big city life to living in the country.</h4>
                 <select id="q7" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -132,9 +133,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 8</b></h3>
-                <h4></h4>
+                <h4>You love to travel.</h4>
                 <select id="q8" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -147,9 +148,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 9</b></h3>
-                <h4></h4>
+                <h4>You would rather read a book than watch a movie.</h4>
                 <select id="q9" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -162,9 +163,9 @@
         </div>
 
         <div class="row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md">
                 <h3><b>Question 10</b></h3>
-                <h4></h4>
+                <h4>You love to go to amusement parks.</h4>
                 <select id="q10" class="chosen-select">
                     <option selected>Select an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -196,6 +197,9 @@
         <div id="submitBtn">
             <button type="submit" class="btn btn-primary btn-md" id="sub-button">Submit</button>
         </div>
+        <div id="returnHome">
+            <a href="home.html"><button class="btn btn-primary btn-md" id="home-button">Return to Home Page</button></a>
+        </div>
 
     </div>
 
@@ -211,7 +215,8 @@
                     if ($(this).val() === "") isValid = false;
                 });
                 $(".chosen-select").each(function () {
-                    if ($(this).val() === "") isValid = false;
+                    if ($(this).val() < 1 || $(this).val() > 5) isValid = false;
+                    alert("Please fill out the whole survey!")
                 });
                 return isValid;
             }
@@ -246,6 +251,8 @@
                 alert("Please fill out all fields before you submit!");
             }
         });
+
+        
         function clearFields(){
     $(".form-control").val("");
     $(".chosen-select").val("");
