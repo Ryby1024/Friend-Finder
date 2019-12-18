@@ -10,9 +10,12 @@ module.exports = function (app) {
     app.post("/api/friends", function (req, res) {
 
 
-        let bestMatch;
+        let bestMatch = {
+            name: "",
+            photo: "",
+            friendDifference: 100
+        };
         let arrayCheck = 0;
-        let friendDifference = 100;
         let user = req.body;
 
 
@@ -21,22 +24,28 @@ module.exports = function (app) {
             return parseInt(item, 10);
         });
 
+        user = {
+            name: req.body.name,
+            photo: req.body.photo,
+            scores: num
+        };
+
         let sum = num.reduce((a, b) => a + b, 0);
 
         for (let i = 0; i < friends.length; i++) {
-
-
+            totalDifference= 0;
             let friendScore = friends[i].scores.reduce((a, b) => a + b, 0);
-            let totalDifference = Math.abs(sum - friendScore);
-            if (totalDifference <= friendDifference) {
-                bestMatch = friends[i]
-                friendDifference = totalDifference;
+             totalDifference = Math.abs(sum - friendScore);
+            if (totalDifference <= bestMatch.friendDifference) {
+                bestMatch.name = friends[i].name;
+                bestMatch.photo = friends[i].photo;
+                bestMatch.friendDifference = totalDifference;
             }
             arrayCheck++;
             
         };
 
-        if (friends.length === arrayCheck) {
+        if (friends.length == arrayCheck) {
             friends.push(user);
             console.log(user);
             console.log("Friend added");
