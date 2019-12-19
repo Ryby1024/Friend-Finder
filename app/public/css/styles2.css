@@ -1,0 +1,20 @@
+body{
+    font-family: 'Pontano Sans', sans-serif;
+    background-image: url("../images/heart.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#sub-button {
+    margin-top: 10px;
+}
+
+#home-button    {
+    margin-top: 10px;
+    background-color: gold;
+    color: black;
+}

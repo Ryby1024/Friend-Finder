@@ -1,11 +1,19 @@
 body {
-    background-color: rgb(250, 204, 212);
+    background-image: url("../images/hands.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Pontano Sans', sans-serif;
 }
 
 .container{
     color: purple;
 }
 
-h4{
-    color: red;
+.jumbotron {
+    margin-top: 15px;
+    background-color: rgb(233, 230, 230);
 }
