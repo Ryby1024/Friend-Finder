@@ -8,6 +8,8 @@
 
 ![Friend](app/public/images/friend2.jpg)
 
+![Friend](app/public/images/friend3.jpg)
+
 ### Tools used to create Friend Finder
 
 * HTML5
