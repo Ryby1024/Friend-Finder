@@ -18,6 +18,17 @@ body{
     background-color: gold;
     color: black;
 }
-.modal  {
-    color: black;
+.modal-content {
+    color: white;
+    background-color: black;
+}
+.modal-header {
+    background-color: rgb(247, 160, 175);
+    text-align: center;
+}
+.modal-footer   {
+    background-color:  rgb(247, 160, 175);
+}
+#modal-button   {
+    background-color: purple;
 }
