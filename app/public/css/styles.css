@@ -1,6 +1,8 @@
 body {
-    background-image: url("../images/hands.jpg");
-    
+    background-image: url("../images/myfriends.jpg");
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     color: white;
     font-family: 'Pontano Sans', sans-serif;
 }

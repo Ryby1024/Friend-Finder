@@ -1,6 +1,6 @@
 body{
     font-family: 'Pontano Sans', sans-serif;
-    background-image: url("../images/heart.jpg");
+    background-image: url("../images/family.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -23,12 +23,13 @@ body{
     background-color: black;
 }
 .modal-header {
-    background-color: rgb(247, 160, 175);
+    background-color: rgb(247, 45, 78);
     text-align: center;
 }
 .modal-footer   {
-    background-color:  rgb(247, 160, 175);
+    background-color:  rgb(247, 45, 78);
 }
 #modal-button   {
-    background-color: purple;
+    background-color: black;
+    color: white;
 }
